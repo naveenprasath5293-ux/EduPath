@@ -1,0 +1,204 @@
+/**
+ * Bootstrap 5 overrides — EduPath warm palette
+ * Overrides compiled Bootstrap classes with our design tokens.
+ */
+
+/* ── Body / base ──────────────────────────────────────────────── */
+body {
+  background-color: var(--scm-background);
+  color: var(--scm-text);
+  font-family: var(--scm-font-base);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background-color var(--scm-transition),
+              border-color var(--scm-transition),
+              box-shadow var(--scm-transition),
+              transform 0.15s ease;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background-color: var(--scm-primary);
+  border-color: var(--scm-primary);
+  color: #fff;
+  border-radius: var(--scm-radius-sm);
+  box-shadow: var(--scm-shadow-card);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: var(--scm-primary-hover);
+  border-color: var(--scm-primary-hover);
+  color: #fff;
+  box-shadow: var(--scm-shadow-soft);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  background-color: var(--scm-primary);
+  border-color: var(--scm-primary);
+  opacity: 0.55;
+}
+
+.btn-outline-primary {
+  color: var(--scm-primary);
+  border-color: var(--scm-primary);
+  border-radius: var(--scm-radius-sm);
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+  background-color: var(--scm-primary);
+  border-color: var(--scm-primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: var(--scm-sidebar-bg);
+  border-color: var(--scm-border);
+  color: var(--scm-text);
+  border-radius: var(--scm-radius-sm);
+}
+.btn-secondary:hover {
+  background-color: var(--scm-border);
+  border-color: var(--scm-border);
+  color: var(--scm-text);
+}
+
+/* ── Cards ────────────────────────────────────────────────────── */
+.card {
+  background-color: var(--scm-card-bg);
+  border: 1px solid var(--scm-border);
+  border-radius: var(--scm-radius);
+  box-shadow: var(--scm-shadow-card);
+  transition: box-shadow var(--scm-transition), transform var(--scm-transition);
+}
+.card:hover { box-shadow: var(--scm-shadow-soft); }
+.card-body { padding: 1.5rem; }
+
+/* ── Navbar ───────────────────────────────────────────────────── */
+.navbar {
+  background-color: rgba(255, 248, 238, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--scm-border);
+  box-shadow: 0 1px 8px rgba(107, 79, 58, 0.07);
+}
+.navbar-brand {
+  color: var(--scm-primary) !important;
+  font-family: var(--scm-font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+}
+.nav-link {
+  color: var(--scm-text) !important;
+  font-weight: 500;
+  padding: 0.4rem 0 !important;
+  position: relative;
+  transition: color var(--scm-transition);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--scm-primary);
+  border-radius: 1px;
+  transition: width 0.25s ease;
+}
+.nav-link:hover { color: var(--scm-primary) !important; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--scm-primary) !important; }
+
+/* ── Footer ───────────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--scm-warm-brown);
+  color: rgba(255,248,238,0.80);
+}
+.site-footer h5, .site-footer h6 { color: #FFF8EE; }
+.site-footer a { color: rgba(255,248,238,0.70); transition: color var(--scm-transition); }
+.site-footer a:hover { color: #FFF8EE; }
+
+/* ── Forms ────────────────────────────────────────────────────── */
+.form-label { font-weight: 500; color: var(--scm-text); font-size: 0.875rem; }
+.form-control, .form-select {
+  border-radius: var(--scm-radius-sm);
+  border-color: var(--scm-border);
+  background-color: var(--scm-card-bg);
+  color: var(--scm-text);
+  font-size: 0.9375rem;
+  padding: 0.6rem 0.875rem;
+  transition: border-color var(--scm-transition), box-shadow var(--scm-transition);
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--scm-primary);
+  box-shadow: 0 0 0 3px rgba(201, 130, 58, 0.15);
+  background-color: var(--scm-card-bg);
+  color: var(--scm-text);
+}
+.form-control::placeholder { color: var(--scm-text-muted); }
+.form-check-input:checked {
+  background-color: var(--scm-primary);
+  border-color: var(--scm-primary);
+}
+
+/* ── Badges ───────────────────────────────────────────────────── */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ── Pagination ───────────────────────────────────────────────── */
+.page-link {
+  color: var(--scm-primary);
+  border-color: var(--scm-border);
+  background-color: var(--scm-card-bg);
+  border-radius: var(--scm-radius-xs) !important;
+  transition: all var(--scm-transition);
+}
+.page-link:hover {
+  color: var(--scm-primary-hover);
+  background-color: var(--scm-primary-light);
+  border-color: var(--scm-border);
+}
+.page-item.active .page-link {
+  background-color: var(--scm-primary);
+  border-color: var(--scm-primary);
+}
+.page-item.disabled .page-link { color: var(--scm-text-muted); }
+
+/* ── Alert ────────────────────────────────────────────────────── */
+.alert-warning {
+  background-color: rgba(217, 164, 65, 0.12);
+  border-color: rgba(217, 164, 65, 0.30);
+  color: var(--scm-warm-brown);
+}
+
+/* ── Nav pills ────────────────────────────────────────────────── */
+.nav-pills .nav-link.active {
+  background-color: var(--scm-primary);
+  color: #fff;
+}
+
+/* ── Spinner ──────────────────────────────────────────────────── */
+.spinner-border { color: var(--scm-primary); }
+
+/* ── Table ────────────────────────────────────────────────────── */
+.table {
+  color: var(--scm-text);
+  border-color: var(--scm-border);
+}
+.table thead th {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--scm-text-secondary);
+  border-bottom-color: var(--scm-border);
+  background-color: var(--scm-section-bg);
+}
+.table-hover tbody tr:hover td { background-color: var(--scm-primary-light); }
+.table td { border-color: var(--scm-border-light); vertical-align: middle; }

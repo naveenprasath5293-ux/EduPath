@@ -1,0 +1,139 @@
+/* ── Global Styles — EduPath ───────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scm-border) transparent;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--scm-border); border-radius: 6px; }
+
+::selection {
+  background-color: rgba(201, 130, 58, 0.18);
+  color: var(--scm-text);
+}
+
+body {
+  background-color: var(--scm-background);
+  color: var(--scm-text);
+  font-family: var(--scm-font-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--scm-font-display);
+  font-weight: 600;
+  color: var(--scm-text);
+  line-height: 1.25;
+}
+
+/* ── Utility classes ───────────────────────────────────────────── */
+.text-primary-brand { color: var(--scm-primary) !important; }
+.text-secondary-custom { color: var(--scm-text-secondary) !important; }
+.text-muted-custom { color: var(--scm-text-muted) !important; }
+.bg-brand-light { background-color: var(--scm-primary-light) !important; }
+.bg-section { background-color: var(--scm-section-bg) !important; }
+.bg-sidebar { background-color: var(--scm-sidebar-bg) !important; }
+
+.rounded-scm { border-radius: var(--scm-radius) !important; }
+.rounded-scm-sm { border-radius: var(--scm-radius-sm) !important; }
+.shadow-soft { box-shadow: var(--scm-shadow-soft) !important; }
+.shadow-card { box-shadow: var(--scm-shadow-card) !important; }
+.border-warm { border-color: var(--scm-border) !important; }
+
+/* ── Section spacing ───────────────────────────────────────────── */
+.page-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.page-section-sm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (max-width: 768px) {
+  .page-section { padding-top: 3rem; padding-bottom: 3rem; }
+  .page-section-sm { padding-top: 2rem; padding-bottom: 2rem; }
+}
+
+/* ── Progress bars ─────────────────────────────────────────────── */
+.progress {
+  background-color: var(--scm-border-light);
+  border-radius: 99px;
+}
+.progress-bar {
+  background-color: var(--scm-primary);
+  border-radius: 99px;
+}
+
+/* ── Category badge ────────────────────────────────────────────── */
+.badge-category {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  border-radius: 99px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background-color: var(--scm-primary-light);
+  color: var(--scm-primary);
+  text-transform: uppercase;
+}
+
+/* ── Stat pill ─────────────────────────────────────────────────── */
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--scm-text-secondary);
+}
+
+/* ── Skeleton shimmer ──────────────────────────────────────────── */
+@keyframes scm-skeleton-shimmer {
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.skeleton {
+  background: linear-gradient(90deg, var(--scm-section-bg) 25%, var(--scm-border-light) 50%, var(--scm-section-bg) 75%);
+  background-size: 200% 100%;
+  animation: scm-skeleton-shimmer 1.4s ease infinite;
+  border-radius: var(--scm-radius-sm);
+}
+
+/* ── Hero image overlay ────────────────────────────────────────── */
+.edu-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(107, 79, 58, 0.72) 0%,
+    rgba(201, 130, 58, 0.44) 100%);
+}
+
+/* ── Divider ────────────────────────────────────────────────────── */
+.warm-divider {
+  border: none;
+  border-top: 1px solid var(--scm-border);
+  margin: 0;
+}
+
+/* ── Link style ─────────────────────────────────────────────────── */
+a {
+  color: var(--scm-primary);
+  text-decoration: none;
+  transition: color var(--scm-transition);
+}
+a:hover { color: var(--scm-primary-hover); }
+
+/* ── Focus visible ──────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--scm-primary);
+  outline-offset: 3px;
+}

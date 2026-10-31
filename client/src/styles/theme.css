@@ -1,0 +1,51 @@
+/**
+ * Global design tokens — EduPath Student Course Management System
+ * Warm, peaceful, professional Indian e-learning platform palette.
+ */
+:root {
+  /* Backgrounds */
+  --scm-background:    #FFF8EE;
+  --scm-section-bg:    #FCF7EF;
+  --scm-card-bg:       #FFFFFF;
+  --scm-sidebar-bg:    #F3E8D7;
+
+  /* Brand */
+  --scm-primary:       #C9823A;
+  --scm-primary-hover: #A8681F;
+  --scm-primary-light: rgba(201, 130, 58, 0.10);
+  --scm-gold:          #D9A441;
+  --scm-warm-brown:    #6B4F3A;
+
+  /* Secondary/accent */
+  --scm-secondary:     #D9A441;
+  --scm-accent:        #C9823A;
+  --scm-success:       #5A8F5C;
+  --scm-danger:        #C0392B;
+
+  /* Text */
+  --scm-text:          #2F2A26;
+  --scm-text-secondary:#776F68;
+  --scm-text-muted:    #A09890;
+
+  /* Borders / dividers */
+  --scm-border:        #E8DED2;
+  --scm-border-light:  #F0E8DC;
+  --scm-hover-glow:    rgba(201, 130, 58, 0.12);
+
+  /* Radii */
+  --scm-radius:        16px;
+  --scm-radius-sm:     10px;
+  --scm-radius-xs:     6px;
+
+  /* Shadows */
+  --scm-shadow-soft:   0 2px 16px rgba(107, 79, 58, 0.08);
+  --scm-shadow-hover:  0 8px 32px rgba(107, 79, 58, 0.15);
+  --scm-shadow-card:   0 1px 6px rgba(107, 79, 58, 0.06);
+
+  /* Typography */
+  --scm-font-base:     'Inter', 'Poppins', system-ui, sans-serif;
+  --scm-font-display:  'Poppins', 'Inter', system-ui, sans-serif;
+
+  /* Transitions */
+  --scm-transition:    0.22s ease;
+}
